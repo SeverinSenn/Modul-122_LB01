@@ -18,8 +18,12 @@ Task 2:
 ### Konfigurationsdateien
 
 TODO: Definieren sie welche Parameter in welchen Konfigurationsdateien gespeichert werden.
-Task 2: Keine  müssen definirt werden. Alles Configurationen sind im externen Config File zu definiren.
-
+Task 2:
+Config File
+BackupLimit -> Limit der Backups
+BackupPath  -> Path in dem das Backupfile lieght
+Gruppen     -> Array der Gruppen
+TarPrefix   -> BackupFile Prefix
 ## Abgrenzungen zum Lösungsdesign
 
 TODO: Nachdem das Programm verwirklicht wurde, hier die Unterschiede von der Implementation zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
