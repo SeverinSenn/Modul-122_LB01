@@ -26,8 +26,12 @@ TODO: Definieren sie welche Parameter in welchen Konfigurationsdateien gespeiche
 Task 1: <username> <groupname> <vorname nachname>
 Dies sind die Benötigten Parameter, die mitgegeben werden müssen. Sie werden verwendet, um die User zu erstellen.
 
-Task 2: Keine  müssen definirt werden. Alles Configurationen sind im externen Config File zu definiren.
-
+Task 2:
+Config File
+BackupLimit -> Limit der Backups
+BackupPath  -> Path in dem das Backupfile lieght
+Gruppen     -> Array der Gruppen
+TarPrefix   -> BackupFile Prefix
 ## Abgrenzungen zum Lösungsdesign
 
 TODO: Nachdem das Programm verwirklicht wurde, hier die Unterschiede von der Implementation zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
