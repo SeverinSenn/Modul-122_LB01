@@ -12,10 +12,13 @@ TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parame
 ### Ablauf der Automation
 
 TODO: Hier kommt ihr UML-Activity Diagramm
+Task 2:
+![Activity Diagramm](Task2Uml.png)
 
 ### Konfigurationsdateien
 
 TODO: Definieren sie welche Parameter in welchen Konfigurationsdateien gespeichert werden.
+Task 2: Keine  müssen definirt werden. Alles Configurationen sind im externen Config File zu definiren.
 
 ## Abgrenzungen zum Lösungsdesign
 
