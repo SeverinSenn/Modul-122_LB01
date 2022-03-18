@@ -59,6 +59,6 @@ done
 
 d=`date +%Y-%m-%d-%H-%M`
 tarfilename="$BackupPath/${TarPrefix}_${d}"
-tar cfP $tarfilename $usersDirechtory
+tar cfP $tarfilename ${usersDirechtory[@]}
 
 echo "${TarPrefix}_${d} wurde erstellt"
