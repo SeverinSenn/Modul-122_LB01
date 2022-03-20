@@ -10,8 +10,11 @@ Task2: Diese Script sorgt dafür das sie die Daten ihrer Usersergruppen sicher k
 ### Installation
 
 TODO: Wie ist das Skript zu installieren. (z.B. apt-get install ... oder tar xvf .... oder ...)
+
 Task2: Das Script können sie leider noch nicht über apt-get installiren. Sie müssen aber bestimmte Dependencies haben. Diese sollten aber im normal fall mit linux geliefert werden.
+
 Dependencies:tar,groupmems,cat 
+
 Task1:
 ### Konfiguration
 Task2:
