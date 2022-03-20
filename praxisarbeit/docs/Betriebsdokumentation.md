@@ -16,10 +16,15 @@ Task1:
 ### Konfiguration
 Task2:
 Um das Script erfolgreich zu strarten mussen sie eine Konfig datei erstellen mit folgenden Inhalten
+
 BackupLimit=
+
 BackupPath=
+
 Gruppendatei= !Datei muss erstelst werden!
+
 TarPrefix=
+
 Ein Beispiel dieser Datei ist auch in diesem Projekt enthalten.
 Danach müssen sie auf Zeile 10 im Script den Pfad der Datei anpassen.
 Nun zu schluss müssen sie das Script nur noch mit Sudo rechten ausführen. 
