@@ -35,4 +35,5 @@ Tipp: ein Cronjob kann ihnen das Leben retten: https://wiki.ubuntuusers.de/Cron/
 Task1: Für diese Script ist keine Konfigurationen vorzunehmen
 ## Bediensanleitung Benutzer
 Task2: Das script wird im Cronjob wie folgt aufgerufen: sudo ./Script
+
 Task1: Das Script wird einfach mit ./ScriptName "Csv Datei der Users"
