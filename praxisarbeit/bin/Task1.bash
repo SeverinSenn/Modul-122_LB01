@@ -6,7 +6,7 @@ cd $cwd		# return to the working directory
 BASENAME=`basename $0`	# Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$	# Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc		# ETCDIR is the config directory
-USERFORCREATEUSERSCRIPTPATH='/home/M122/m122_praxisarbeit_ihre_Pisani-Senn/praxisarbeit/etc/' #Path of file directory create user.
+USERFORCREATEUSERSCRIPTPATH=$1 #Path of file directory create user.
 
 . ../etc/backup.env.bash	# run config file “Scriptname”.env
 
@@ -15,33 +15,40 @@ groupssafed=( $(cut -d: -f1,3 /etc/group | tr '\n' ' ') )
 
 while IFS=',' read field1 field2 field3
 do
+
 	if [ ! "$field1" == "" ] && [ ! "$field2" == "" ] && [ ! "$field3" == "" ] 
     then
 		# do when field1 is not empty
-        if [[ " ${groupssafed[*]} " =~ " ${field2} " ]];
-        then
-            # do when field2 is already a group
-            echo "group exists"
 
+        if ! grep -q $field1 /etc/passwd
+        then
             if [[ " ${groups[*]} " =~ " ${field2} " ]]; 
             then
                 # do when array contain value
-    
-                useradd -d /home/$field2 $field1
-                groupmod -n $field2 $field1
-                echo "Group is saved in  Backup-File"
+                echo "Group $field2 is saved in  Backup-File"
+
             elif [[ ! " ${groups[*]} " =~ " ${field2} " ]];
             then
                 # do when array dont contains value
+             echo "Group $field2 is not saved in the Backup-File"
 
-                useradd -d /home/$field2 $field1
-                groupmod -n $field2 $field1
-             echo "Group is not saved in the Backup-File. In User-Home not saved."
             fi
+            
+            if grep -q $field2 /etc/group
+            then
+                # do when group exists
+
+                useradd -m -G $field2 $field1
+                echo "User $field1 was created and added to Group $field2"
+            else
+                echo "Group $field2 does not exist, User $field1 will not get created!"
+            fi
+        else
+            echo "User $field1 already exists. No user will be created"
         fi
 	else
 		echo "$field1, $field2, $field3 is invalid"
     fi
 		
 
-done < /home/M122/m122_praxisarbeit_ihre_Pisani-Senn/praxisarbeit/etc/UsersForCreateUserScript.txt
+done < $1
