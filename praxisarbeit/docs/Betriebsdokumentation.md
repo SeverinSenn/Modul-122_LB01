@@ -32,8 +32,14 @@ Nun zu schluss müssen sie das Script nur noch mit Sudo rechten ausführen.
 !Script muss rechte haben zum ausführen!
 Tipp: ein Cronjob kann ihnen das Leben retten: https://wiki.ubuntuusers.de/Cron/
 
-Task1: Für diese Script ist keine Konfigurationen vorzunehmen
+Task1: Die Text datei, mit den Usern, muss in dem Format sein:
+(Zwischen den argumenten dürfen sie keinen Abstand machen!)
+
+<username>,<groupname>,<Firstname Lastname>
+,,,
+
+Zuunterst in der Text datei, müssen sie drei komas nacheinander platzieren, damit dies finktioniert.
 ## Bediensanleitung Benutzer
 Task2: Das script wird im Cronjob wie folgt aufgerufen: sudo ./Script
 
-Task1: Das Script wird einfach mit ./ScriptName "Csv Datei der Users"
+Task1: Das Script wird einfach mit ./ScriptName "Pfad der Csv Datei des Users" 
